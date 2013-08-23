@@ -1,10 +1,10 @@
-/*! Backbone.Rpc - v0.1.1
+/*! Backbone.Rpc - v0.1.2
 ------------------------------
-Build @ 2012-11-15
+Build @ 2013-08-23
 Documentation and Full License Available at:
 http://asciidisco.github.com/Backbone.Rpc/index.html
 git://github.com/asciidisco/Backbone.Rpc.git
-Copyright (c) 2012 Sebastian Golasch <public@asciidisco.com>
+Copyright (c) 2013 Sebastian Golasch <public@asciidisco.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
@@ -57,7 +57,7 @@ IN THE SOFTWARE.*/
             // check if we have a non std. content-type
             this.contentType = options !== undef && options.contentType !== undef ? options.contentType : this.contentType;
             // fix issue with the loss of this
-            _.bindAll(this);
+            _.bindAll(this, _.functions(this));
         },
         // store the old Backbone.Model constructor for later use
         oldConst = Backbone.Model.prototype.constructor,
