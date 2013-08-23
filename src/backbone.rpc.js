@@ -31,7 +31,7 @@
             // check if we have a non std. content-type
             this.contentType = options !== undef && options.contentType !== undef ? options.contentType : this.contentType;
             // fix issue with the loss of this
-            _.bindAll(this);
+            _.bindAll(this, _.functions(this));
         },
         // store the old Backbone.Model constructor for later use
         oldConst = Backbone.Model.prototype.constructor,
